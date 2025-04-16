@@ -161,7 +161,7 @@
     <div class="row-custom">
       <div class="col-custom">
         <div class="text-center">
-          <img src="gambar/misro.jpg" alt="Misro" class="img-fluid" />
+          <img src="/images/misro.jpg" alt="Misro" class="img-fluid" />
         </div>
       </div>
 

@@ -151,7 +151,7 @@
             <h3>Cerita Sangkuriang</h3> 
         </div>
 
-        <img src="gambar/cover buku cerita sangkuriang.jpg" alt="Judul Cerita" class="story-image">
+        <img src="/images/cover buku cerita sangkuriang.jpg" alt="Judul Cerita" class="story-image">
 
         <div class="story-text">
             Dahulu kala, hiduplah seorang wanita cantik bernama Dayang Sumbi. Ia memiliki seorang anak laki-laki bernama Sangkuriang. Mereka hidup damai bersama seekor anjing sakti bernama Tumang, yang tak lain adalah ayah Sangkuriang dalam wujud anjing.

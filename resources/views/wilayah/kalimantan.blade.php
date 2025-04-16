@@ -229,29 +229,29 @@
 
       <div class="col-2 d-flex flex-column justify-content-between">
         <div class="ornamen ornamen-kiri">
-          <img src="../gambar/ornamen1.png" alt="">
+          <img src="/images/ornamen1.png" alt="">
         </div>
       </div>
 
       <div class="col-8">
         <div class="judul-besar">Pilih Wilayah Kalimantan Yang <br> Ingin Anda Kunjungi</div>
         <div class="p-3 mb-1" data-nama="Kalimantan Barat">
-          <img class="logo" src="../gambar/logo-kalimantan-barat.png" alt="Logo Kalimantan Barat">
-          <img src="../gambar/kalimantan_barat.jpg" alt="Kalimantan Barat">
+          <img class="logo" src="/images/logo-kalimantan-barat.png" alt="Logo Kalimantan Barat">
+          <img src="/images/kalimantan_barat.jpg" alt="Kalimantan Barat">
         </div>
         <div class="p-3 mb-1" data-nama="Kalimantan Tengah">
-          <img class="logo" src="../gambar/logo-kalimantan-tengah.png" alt="Logo Kalimantan Tengah">
-          <img src="../gambar/kalimantan_tengah.jpg" alt="Kalimantan Tengah">
+          <img class="logo" src="/images/logo-kalimantan-tengah.png" alt="Logo Kalimantan Tengah">
+          <img src="/images/kalimantan_tengah.jpg" alt="Kalimantan Tengah">
         </div>
         <div class="p-3" data-nama="Kalimantan Timur">
-          <img class="logo" src="../gambar/logo-kalimantan-timur.png" alt="Logo Kalimantan Timur">
-          <img src="../gambar/kalimantan_timur.jpg" alt="Kalimantan Timur">
+          <img class="logo" src="/images/logo-kalimantan-timur.png" alt="Logo Kalimantan Timur">
+          <img src="/images/kalimantan_timur.jpg" alt="Kalimantan Timur">
         </div>
       </div>
 
       <div class="col-2 d-flex flex-column justify-content-between">
         <div class="ornamen ornamen-kanan mirror">
-          <img src="../gambar/ornamen1.png" alt="">
+          <img src="/images/ornamen1.png" alt="">
         </div>
       </div>
     </div>

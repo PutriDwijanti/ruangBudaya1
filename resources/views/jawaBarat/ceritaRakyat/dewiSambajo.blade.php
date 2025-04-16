@@ -151,7 +151,7 @@
             <h3>Kisah Dewi Sambajo</h3> 
         </div>
 
-        <img src="gambar/Kisah_Dewi_Samboja.jpg" alt="Kisah Dewi Sambajo" class="story-image">
+        <img src="/images/Kisah_Dewi_Samboja.jpg" alt="Kisah Dewi Sambajo" class="story-image">
 
         <div class="story-text">
             Dewi Sambajo adalah seorang putri cantik dari Kerajaan Bone di Sulawesi Selatan. Ia dikenal bukan hanya karena kecantikannya, tetapi juga karena kebijaksanaan dan keberaniannya.

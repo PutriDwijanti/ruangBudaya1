@@ -167,7 +167,7 @@
   <div class="content">
     <div class="row-custom">
       <div class="col-custom text-center">
-        <img src="gambar/sisingaan.jpg" alt="Sisingaan" class="img-fluid" />
+        <img src="/images/sisingaan.jpg" alt="Sisingaan" class="img-fluid" />
       </div>
       <div class="col-custom">
         <div class="card-custom">

@@ -228,29 +228,29 @@
     <div class="row">
       <div class="col-2 d-flex flex-column justify-content-between">
         <div class="ornamen ornamen-kiri">
-          <img src="../gambar/ornamen1.png" alt="">
+          <img src="/images/ornamen1.png" alt="">
         </div>
       </div>
 
       <div class="col-8">
         <div class="judul-besar">Pilih Wilayah Sumatera Yang <br> Ingin Anda Kunjungi</div>
         <div class="p-3 mb-1" data-nama="Sumatera Barat">
-          <img class="logo" src="../gambar/logo-sumatra-barat.png" alt="Logo Sumatra Barat">
-          <img src="../gambar/sumatra_barat.jpg" alt="Sumatra Barat">
+          <img class="logo" src="/images/logo-sumatra-barat.png" alt="Logo Sumatra Barat">
+          <img src="/images/sumatra_barat.jpg" alt="Sumatra Barat">
         </div>
         <div class="p-3 mb-1" data-nama="Sumatera Utara">
-          <img class="logo" src="../gambar/logo-sumatra-utara.png" alt="Logo Sumatra Utara">
-          <img src="../gambar/sumatra_utara.jpg" alt="Sumatra Utara">
+          <img class="logo" src="/images/logo-sumatra-utara.png" alt="Logo Sumatra Utara">
+          <img src="/images/sumatra_utara.jpg" alt="Sumatra Utara">
         </div>
         <div class="p-3" data-nama="Sumatera Selatan">
-          <img class="logo" src="../gambar/logo-sumatra-selatan.png" alt="Logo Sumatra Selatan">
-          <img src="../gambar/sumatra_selatan.jpg" alt="Sumatra Selatan">
+          <img class="logo" src="/images/logo-sumatra-selatan.png" alt="Logo Sumatra Selatan">
+          <img src="/images/sumatra_selatan.jpg" alt="Sumatra Selatan">
         </div>
       </div>      
 
       <div class="col-2 d-flex flex-column justify-content-between">
         <div class="ornamen ornamen-kanan mirror">
-          <img src="../gambar/ornamen1.png" alt="">
+          <img src="/images/ornamen1.png" alt="">
         </div>
       </div>
     </div>

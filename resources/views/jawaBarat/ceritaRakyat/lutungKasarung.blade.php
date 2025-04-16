@@ -151,7 +151,7 @@
             <h3>Cerita Lutung Kasarung</h3> 
         </div>
 
-        <img src="gambar/lutung_kasarung.jpg" alt="Lutung Kasarung" class="story-image">
+        <img src="/images/lutung_kasarung.jpg" alt="Lutung Kasarung" class="story-image">
 
         <div class="story-text">
             Dahulu kala di sebuah kerajaan bernama Pasir Batang, hiduplah seorang putri cantik bernama Purbasari. Ia adalah adik dari Putri Purbararang. Sang raja, ayah mereka, ingin menyerahkan tahta kepada Purbasari. Hal ini membuat iri hati Purbararang.

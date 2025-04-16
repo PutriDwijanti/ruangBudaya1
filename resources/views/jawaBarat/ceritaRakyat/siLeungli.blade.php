@@ -151,7 +151,7 @@
             <h3>Cerita Si Leungli</h3>
         </div>
 
-        <img src="gambar/leungli.jpg" alt="Cerita Si Leungli" class="story-image">
+        <img src="/images/leungli.jpg" alt="Cerita Si Leungli" class="story-image">
 
         <div class="story-text">
             Alkisah, hiduplah seorang gadis baik hati bernama Si Leungli. Ia tinggal bersama saudara-saudaranya yang jahat dan sering menyuruhnya bekerja tanpa henti. Setiap hari, Si Leungli harus mencuci pakaian, memasak, dan membersihkan rumah, sementara saudara-saudaranya hanya bermalas-malasan.

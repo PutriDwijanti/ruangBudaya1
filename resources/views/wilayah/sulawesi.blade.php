@@ -229,29 +229,29 @@
 
       <div class="col-2 d-flex flex-column justify-content-between">
         <div class="ornamen ornamen-kiri">
-          <img src="../gambar/ornamen1.png" alt="">
+          <img src="/images/ornamen1.png" alt="">
         </div>
       </div>
 
       <div class="col-8">
         <div class="judul-besar">Pilih Wilayah Sulawesi Yang <br> Ingin Anda Kunjungi</div>
         <div class="p-3 mb-1" data-nama="Sulawesi Barat">
-          <img class="logo" src="../gambar/logo-sulawesi-barat.png" alt="Logo Sulawesi Barat">
-          <img src="../gambar/sulawesi_barat.jpg" alt="Sulawesi Barat">
+          <img class="logo" src="/images/logo-sulawesi-barat.png" alt="Logo Sulawesi Barat">
+          <img src="/images/sulawesi_barat.jpg" alt="Sulawesi Barat">
         </div>
         <div class="p-3 mb-1" data-nama="Sulawesi Tengah">
-          <img class="logo" src="../gambar/logo-sulawesi-tengah.png" alt="Logo Sulawesi Tengah">
-          <img src="../gambar/sulawesi_tengah.jpeg" alt="Sulawesi tengah">
+          <img class="logo" src="/images/logo-sulawesi-tengah.png" alt="Logo Sulawesi Tengah">
+          <img src="/images/sulawesi_tengah.jpeg" alt="Sulawesi tengah">
         </div>
         <div class="p-3" data-nama="Sulawesi Selatan">
-          <img class="logo" src="../gambar/logo-sulawesi-selatan.png" alt="Logo Sulawesi Selatan">
-          <img src="../gambar/sulawesi_selatan.jpg" alt="Sulawesi Selatan">
+          <img class="logo" src="/images/logo-sulawesi-selatan.png" alt="Logo Sulawesi Selatan">
+          <img src="/images/sulawesi_selatan.jpg" alt="Sulawesi Selatan">
         </div>
       </div>
 
       <div class="col-2 d-flex flex-column justify-content-between">
         <div class="ornamen ornamen-kanan mirror">
-          <img src="../gambar/ornamen1.png" alt="">
+          <img src="/images/ornamen1.png" alt="">
         </div>
       </div>
     </div>

@@ -167,7 +167,7 @@
   <div class="content">
     <div class="row-custom">
       <div class="col-custom text-center">
-        <img src="gambar/wayang_golek.jpg" alt="Wayang Golek" class="img-fluid" />
+        <img src="/images/wayang_golek.jpg" alt="Wayang Golek" class="img-fluid" />
       </div>
       <div class="col-custom">
         <div class="card-custom">

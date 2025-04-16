@@ -151,7 +151,7 @@
             <h3>Cerita Situ Bagendit</h3>
         </div>
 
-        <img src="gambar/situ_bagendit.jpg" alt="Cerita Situ Bagendit" class="story-image">
+        <img src="/images/situ_bagendit.jpg" alt="Cerita Situ Bagendit" class="story-image">
 
         <div class="story-text">
             Dahulu kala, di daerah Garut, hiduplah seorang janda kaya raya bernama Nyi Endit. Ia memiliki harta melimpah, namun terkenal sangat kikir dan sombong. Ia tidak pernah mau membantu warga miskin yang kelaparan.

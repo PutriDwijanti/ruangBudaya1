@@ -229,29 +229,29 @@
   
       <div class="col-2 d-flex flex-column justify-content-between">
         <div class="ornamen ornamen-kiri">
-          <img src="../gambar/ornamen1.png" alt="">
+          <img src="/images/ornamen1.png" alt="">
         </div>
       </div>
 
       <div class="col-8">
         <div class="judul-besar">Pilih Wilayah Jawa Yang <br> Ingin Anda Kunjungi</div>
         <div class="p-3 mb-1" data-nama="Jawa Barat">
-          <img class="logo" src="../gambar/logo-jabar.png" alt="Logo Jawa Barat">
-          <img src="../gambar/jawaBarat.jpg" alt="Jawa Barat">
+          <img class="logo" src="/images/logo-jabar.png" alt="Logo JawaBarat">
+          <a href="/wilayah/jawaBarat/index.blade.php"><img src="/images/jawaBarat.jpg" alt="JawaBarat"></a>
         </div>
         <div class="p-3 mb-1" data-nama="Jawa Tengah">
-          <img class="logo" src="../gambar/logo-jateng.png" alt="Logo Jawa Tengah">
-          <img src="../gambar/jawaTengah.jpg" alt="Jawa Tengah">
+          <img class="logo" src="/images/logo-jateng.png" alt="Logo Jawa Tengah">
+          <img src="/images/jawaTengah.jpg" alt="JawaTengah">
         </div>
         <div class="p-3" data-nama="Jawa Timur">
-          <img class="logo" src="../gambar/logo-jatim.png" alt="Logo Jawa Timur">
-          <img src="../gambar/jawaTimur.jpg" alt="Jawa Timur">
+          <img class="logo" src="/images/logo-jatim.png" alt="Logo Jawa Timur">
+          <img src="/images/jawaTimur.jpg" alt="Jawa Timur">
         </div>
       </div>
 
       <div class="col-2 d-flex flex-column justify-content-between">
         <div class="ornamen ornamen-kanan mirror">
-          <img src="../gambar/ornamen1.png" alt="">
+          <img src="/images/ornamen1.png" alt="">
         </div>
       </div>
     </div>
@@ -271,6 +271,23 @@
       sideMenu.classList.remove('active');
       overlay.classList.remove('active');
     });
+
+     // Klik gambar untuk pindah halaman
+      document.addEventListener("DOMContentLoaded", function () {
+    const wilayahElements = document.querySelectorAll(".p-3");
+
+    wilayahElements.forEach((el) => {
+      el.style.cursor = "pointer";
+      const namaWilayah = el.getAttribute("data-nama");
+
+      el.addEventListener("click", function () {
+  const slugWilayah = namaWilayah.toLowerCase().replace(/\s+/g, '-'); 
+  window.location.href = `/pulau/jawa/${slugWilayah}`;
+});
+
+    });
+  });
+
   </script>
 </body>
 </html>

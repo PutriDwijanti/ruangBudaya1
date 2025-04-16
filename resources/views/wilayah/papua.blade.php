@@ -229,7 +229,7 @@
   
       <div class="col-2 d-flex flex-column justify-content-between">
         <div class="ornamen ornamen-kiri">
-          <img src="../gambar/ornamen1.png" alt="">
+          <img src="/images/ornamen1.png" alt="">
         </div>
       </div>
 
@@ -237,22 +237,22 @@
       <div class="col-8">
         <div class="judul-besar">Pilih Wilayah Papua Yang <br> Ingin Anda Kunjungi</div>
         <div class="p-3 mb-1" data-nama="Papua Barat">
-          <img class="logo" src="../gambar/logo-papua-barat.png" alt="Logo Papua Barat">
-          <img src="../gambar/papua_barat.jpg" alt="papua Barat">
+          <img class="logo" src="/images/logo-papua-barat.png" alt="Logo Papua Barat">
+          <img src="/images/papua_barat.jpg" alt="papua Barat">
         </div>
         <div class="p-3 mb-1" data-nama="Papua Tengah">
-          <img class="logo" src="../gambar/Logo-papua-tengah.png" alt="Logo Papua Tengah">
-          <img src="../gambar/papua_tengah.jpg" alt="papua tengah">
+          <img class="logo" src="/images/Logo-papua-tengah.png" alt="Logo Papua Tengah">
+          <img src="/images/papua_tengah.jpg" alt="papua tengah">
         </div>
         <div class="p-3" data-nama="Papua Selatan">
-          <img class="logo" src="../gambar/logo-papua-selatan.png" alt="Logo Papua Selatan">
-          <img src="../gambar/papua_selatan.jpg" alt="papua Selatan">
+          <img class="logo" src="/images/logo-papua-selatan.png" alt="Logo Papua Selatan">
+          <img src="/images/papua_selatan.jpg" alt="papua Selatan">
         </div>
       </div>
 
       <div class="col-2 d-flex flex-column justify-content-between">
         <div class="ornamen ornamen-kanan mirror">
-          <img src="../gambar/ornamen1.png" alt="">
+          <img src="/images/ornamen1.png" alt="">
         </div>
       </div>
     </div>

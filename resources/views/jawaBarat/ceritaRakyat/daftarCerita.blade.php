@@ -52,13 +52,18 @@
             justify-content: space-between;
             align-items: center;
             color: #000;
+            text-decoration: none;
+        }
+
+        .card-story:hover {
+            background-color: #e0d2ca;
         }
 
         .card-story .title {
             font-weight: bold;
             color: #d88c00;
         }
-
+        
         .card-story .region {
             font-size: 14px;
             color: #555;
@@ -142,59 +147,58 @@
         <div class="search-box mb-4 mt-3">
             <div class="d-flex align-items-center">
                 <span class="me-2">🔍</span>
-                <input type="text" placeholder="Cari cerita...">
+                <input type="text" placeholder="Cari cerita..." id="searchInput">
             </div>
         </div>
 
-        <h5 class="fw-bold mt-4">Rekomendasi</h5>
-        <div class="card-story">
-            <div>
-                <div class="title">Lutung Kasarung</div>
-                <div class="region">Jawa Barat</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
-        <div class="card-story">
-            <div>
-                <div class="title">Sangkuriang</div>
-                <div class="region">Jawa Barat</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
-
-        <h5 class="fw-bold mt-4">Cerita lainnya</h5>
-        <div class="card-story">
-            <div>
-                <div class="title">Si Kabayan</div>
-                <div class="region">Jawa Barat</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
-        <div class="card-story">
-            <div>
-                <div class="title">Si Leungli</div>
-                <div class="region">Jawa Barat</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
-        <div class="card-story">
-            <div>
-                <div class="title">Kisah Dewi Samboja</div>
-                <div class="region">Jawa Barat</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
-        <div class="card-story">
-            <div>
-                <div class="title">Situ Bagendit</div>
-                <div class="region">Jawa Barat</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
+        <h5 class="fw-bold mt-4">Daftar Cerita</h5>
+        <div id="ceritaContainer"></div>
     </div>
 
-    <!-- Script for toggle menu -->
     <script>
+        const ceritaRakyat = [
+            { judul: "Lutung Kasarung", asal: "Jawa Barat", slug: "lutung-kasarung" },
+            { judul: "Sangkuriang", asal: "Jawa Barat", slug: "sangkuriang" },
+            { judul: "Si Kabayan", asal: "Jawa Barat", slug: "si-kabayan" },
+            { judul: "Si Leungli", asal: "Jawa Barat", slug: "si-leungli" },
+            { judul: "Kisah Dewi Samboja", asal: "Jawa Barat", slug: "kisah-dewi-samboja" },
+            { judul: "Situ Bagendit", asal: "Jawa Barat", slug: "situ-bagendit" }
+        ];
+
+        const container = document.getElementById('ceritaContainer');
+        const searchInput = document.getElementById('searchInput');
+
+        function renderCerita(list) {
+            container.innerHTML = '';
+            list.forEach(cerita => {
+                const card = document.createElement('a');
+                card.className = 'card-story';
+                card.href = `/cerita-rakyat/jawa-barat/${cerita.slug}`;
+                card.innerHTML = `
+                    <div>
+                        <div class="title">${cerita.judul}</div>
+                        <div class="region">${cerita.asal}</div>
+                    </div>
+                    <i class="bi bi-arrow-right-circle"></i>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Render semua cerita saat halaman load
+        renderCerita(ceritaRakyat);
+
+        // Filter berdasarkan input
+        searchInput.addEventListener('input', () => {
+            const keyword = searchInput.value.toLowerCase();
+            const filtered = ceritaRakyat.filter(c =>
+                c.judul.toLowerCase().includes(keyword) ||
+                c.asal.toLowerCase().includes(keyword)
+            );
+            renderCerita(filtered);
+        });
+
+        // Toggle menu
         const toggle = document.querySelector('.menu-toggle');
         const sideMenu = document.getElementById('sideMenu');
         const overlay = document.getElementById('overlay');
@@ -211,5 +215,4 @@
     </script>
 
 </body>
-
 </html>

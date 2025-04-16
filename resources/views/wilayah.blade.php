@@ -1,19 +1,24 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pilih Wilayah - Ruang Budaya</title>
-
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet"/>
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       height: 100vh;
@@ -69,19 +74,27 @@
       pointer-events: none;
     }
 
-    .ornamen-kiri,
-    .ornamen-kanan {
+    .ornamen-kiri {
       position: fixed;
       bottom: 0;
+      left: 0;
       z-index: 1000;
       width: 120px;
       opacity: 0.8;
     }
 
-    .ornamen-kiri { left: 0; }
-    .ornamen-kanan { right: 0; }
+    .ornamen-kanan {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 1000;
+      width: 120px;
+      opacity: 0.8;
+    }
 
-    .mirror { transform: scaleX(-1); }
+    .mirror {
+      transform: scaleX(-1);
+    }
 
     .menu-toggle {
       position: absolute;
@@ -90,6 +103,7 @@
       z-index: 1050;
     }
 
+    /* Side Menu */
     .side-menu {
       position: fixed;
       top: 0;
@@ -104,7 +118,9 @@
       border-radius: 20px 0 0 20px;
     }
 
-    .side-menu.active { right: 0; }
+    .side-menu.active {
+      right: 0;
+    }
 
     .side-menu h5 {
       color: white;
@@ -126,129 +142,145 @@
 
     .overlay {
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background-color: rgba(0, 0, 0, 0.3);
       display: none;
       z-index: 1050;
     }
 
-    .overlay.active { display: block; }
+    .overlay.active {
+      display: block;
+    }
 
     @media (max-width: 991.98px) {
-      .ornamen { display: none !important; }
-      .judul-besar { font-size: 20px; margin-top: 40px; }
-      .side-menu { width: 180px; }
-      .side-menu h5 { font-size: 16px; }
-      .side-menu a { font-size: 13px; }
+      .ornamen {
+        display: none !important;
+      }
+
+      .judul-besar {
+        font-size: 20px;
+        margin-top: 40px;
+      }
+
+      .side-menu {
+        width: 180px;
+      }
+
+      .side-menu h5 {
+        font-size: 16px;
+      }
+
+      .side-menu a {
+        font-size: 13px;
+      }
     }
 
     @media (max-width: 576px) {
-      .judul-besar { font-size: 18px; }
-      .side-menu h5 { font-size: 15px; }
-      .side-menu a { font-size: 12px; }
+      .judul-besar {
+        font-size: 18px;
+      }
+
+      .side-menu h5 {
+        font-size: 15px;
+      }
+
+      .side-menu a {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
+
 <body>
+  <!-- Tombol toggle -->
+  <div class="menu-toggle">
+    <button class="btn btn-outline-light" id="toggleMenuBtn">☰</button>
+  </div>
+  
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
 
-<!-- Tombol Toggle -->
-<div class="menu-toggle">
-  <button class="btn btn-outline-light" id="toggleMenuBtn">☰</button>
-</div>
+  <!-- Side Menu -->
+  <div class="side-menu" id="sideMenu">
+    <h5>Ruang Budaya</h5>
+    <a href="#">Dashboard</a>
+    <a href="#">Akun</a>
+    <a href="#">Logout</a>
+  </div>
 
-<!-- Overlay -->
-<div class="overlay" id="overlay"></div>
-
-<!-- Side Menu -->
-<div class="side-menu" id="sideMenu">
-  <h5>Ruang Budaya</h5>
-  <a href="#">Dashboard</a>
-  <a href="#">Akun</a>
-  <a href="#">Logout</a>
-</div>
-
-<div class="container text-center">
-  <div class="row">
-    <div class="col-2 d-flex flex-column justify-content-between">
-      <div class="ornamen ornamen-kiri">
-        <img src="{{ asset('images/ornamen1.png') }}" alt="">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-2 d-flex flex-column justify-content-between">
+        <div class="ornamen ornamen-kiri">
+          <img src="/images/ornamen1.png" alt="">
+        </div>
       </div>
-    </div>
-
-    <div class="col-8">
-      <div class="judul-besar">Pilih Wilayah Yang Ingin <br> Anda Kunjungi</div>
-
-      @php
-    // data provinsi
-    $provinsi = [
-        ['name' => 'Jawa Barat'],
-        ['name' => 'Jawa Tengah'],
-        ['name' => 'Jawa Timur'],
-    ];
-@endphp
-@foreach ($provinsi as $item)
-@php
-    $namaWilayah = strtolower($item['name']);
-    
-    // Map langsung berdasarkan nama provinsi
-    if ($namaWilayah === 'jawa barat') {
-        $gambarPath = asset('images/jawaBarat.jpg');
-    } elseif ($namaWilayah === 'jawa tengah') {
-        $gambarPath = asset('images/jawaTengah.jpg');
-    } elseif ($namaWilayah === 'jawa timur') {
-        $gambarPath = asset('images/jawaTimur.jpg');
-    } else {
-        $gambarPath = asset('images/default.jpg');
-    }
-@endphp
-<div class="p-3 mb-1" data-nama="{{ $item['name'] }}">
-    <img src="{{ $gambarPath }}" alt="{{ $item['name'] }}" class="img-fluid rounded mb-2" style="height: 200px; object-fit: cover;">
-    <div class="fw-semibold text-center text-white">{{ $item['name'] }}</div>
-</div>
-@endforeach
-
-    </div>
-
-    <div class="col-2 d-flex flex-column justify-content-between">
-      <div class="ornamen ornamen-kanan mirror">
-        <img src="{{ asset('images/ornamen1.png') }}" alt="">
+      
+      <div class="col-8">
+        <div class="judul-besar">Pilih Wilayah Yang Ingin <br> Anda Kunjungi</div>
+        <div class="p-3 mb-1" data-nama="Papua">
+          <img src="/images/papua.jpeg" alt="Papua">
+        </div>
+        <div class="p-3 mb-1" data-nama="Kalimantan">
+          <img src="/images/kalimantan.jpg" alt="Kalimantan">
+        </div>
+        <div class="p-3 mb-1" data-nama="Sumatera">
+          <img src="/images/sumatra.jpg" alt="Sumatra">
+        </div>
+        <div class="p-3 mb-1" data-nama="Sulawesi">
+          <img src="/images/sulawesi.jpeg" alt="Sulawesi">
+        </div>
+        <div class="p-3" data-nama="Jawa">
+          <img src="/images/jawa.jpg" alt="Jawa">
+        </div>
+      </div>
+      
+      @foreach ($provinsi as $p)
+          <div class="card mb-3">
+              <h4>{{ $p['nama'] ?? 'Tidak diketahui' }}</h4>
+          </div>
+      @endforeach
+      <div class="col-2 d-flex flex-column justify-content-between">
+        <div class="ornamen ornamen-kanan mirror">
+          <img src="/images/ornamen1.png" alt="">
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- SCRIPT -->
-<script>
-  // Toggle menu
-  const toggleBtn = document.getElementById('toggleMenuBtn');
-  const sideMenu = document.getElementById('sideMenu');
-  const overlay = document.getElementById('overlay');
+  <!-- SCRIPT -->
+  <script>
+    // Toggle menu
+    const toggleBtn = document.getElementById('toggleMenuBtn');
+    const sideMenu = document.getElementById('sideMenu');
+    const overlay = document.getElementById('overlay');
 
-  toggleBtn.addEventListener('click', () => {
-    sideMenu.classList.toggle('active');
-    overlay.classList.toggle('active');
-  });
+    toggleBtn.addEventListener('click', () => {
+      sideMenu.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
 
-  overlay.addEventListener('click', () => {
-    sideMenu.classList.remove('active');
-    overlay.classList.remove('active');
-  });
+    overlay.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      overlay.classList.remove('active');
+    });
 
-  // Klik wilayah → redirect ke file HTML
-  document.addEventListener("DOMContentLoaded", function () {
-    const wilayahElements = document.querySelectorAll(".p-3");
-    wilayahElements.forEach((el) => {
-      el.style.cursor = "pointer";
-      const namaWilayah = el.getAttribute("data-nama").toLowerCase().replace(/\s+/g, '');
-      el.addEventListener("click", function () {
-        window.location.href = "wilayah/" + namaWilayah + ".html";
+    // Klik gambar wilayah → redirect
+    document.addEventListener("DOMContentLoaded", function () {
+      const wilayahElements = document.querySelectorAll(".p-3");
+
+      wilayahElements.forEach((el) => {
+        el.style.cursor = "pointer";
+        const namaWilayah = el.getAttribute("data-nama").toLowerCase();
+        el.addEventListener("click", function () {
+          window.location.href = "/wilayah/" + namaWilayah;
+        });
       });
     });
-  });
-</script>
-
+  </script>
 </body>
+
 </html>
-
-
-

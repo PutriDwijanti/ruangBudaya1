@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ruang Budaya - Cerita Rakyat</title>
+    <title>Ruang Budaya - Cerita Rakyat Jawa Tengah</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -52,6 +52,11 @@
             justify-content: space-between;
             align-items: center;
             color: #000;
+            text-decoration: none;
+        }
+
+        .card-story:hover {
+            background-color: #e0d2ca;
         }
 
         .card-story .title {
@@ -136,65 +141,62 @@
     <!-- Main Content -->
     <div class="main-container">
         <h3 class="fw-bold">Ruang Budaya</h3>
-        <h1 class="fw-bold mt-3">Cerita Rakyat</h1>
+        <h1 class="fw-bold mt-3">Cerita Rakyat Jawa Tengah</h1>
         <p>Apa yang ingin kamu eksplor hari ini?</p>
 
         <div class="search-box mb-4 mt-3">
             <div class="d-flex align-items-center">
                 <span class="me-2">🔍</span>
-                <input type="text" placeholder="Cari cerita...">
+                <input type="text" placeholder="Cari cerita..." id="searchInput">
             </div>
         </div>
 
-        <h5 class="fw-bold mt-4">Rekomendasi</h5>
-        <div class="card-story">
-            <div>
-                <div class="title">Roro Jonggrang</div>
-                <div class="region">Jawa Tengah</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
-        <div class="card-story">
-            <div>
-                <div class="title">Timun Mas</div>
-                <div class="region">Jawa Tengah</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
-
-        <h5 class="fw-bold mt-4">Cerita lainnya</h5>
-        <div class="card-story">
-            <div>
-                <div class="title">Legenda Dewi Sari</div>
-                <div class="region">Jawa Tengah</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
-        <div class="card-story">
-            <div>
-                <div class="title">Jaka Tarub dan 7 Bidadari</div>
-                <div class="region">Jawa Tengah</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
-        <div class="card-story">
-            <div>
-                <div class="title">Ajisaka</div>
-                <div class="region">Jawa Tengah</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
-        <div class="card-story">
-            <div>
-                <div class="title">Ande-Ande Lumut</div>
-                <div class="region">Jawa Tengah</div>
-            </div>
-            <i class="bi bi-arrow-right-circle"></i>
-        </div>
+        <h5 class="fw-bold mt-4">Daftar Cerita</h5>
+        <div id="ceritaContainer"></div>
     </div>
 
-    <!-- Script for toggle menu -->
     <script>
+        const ceritaRakyat = [
+            { judul: "Roro Jonggrang", asal: "Jawa Tengah", slug: "roro-jonggrang" },
+            { judul: "Timun Mas", asal: "Jawa Tengah", slug: "timun-mas" },
+            { judul: "Legenda Dewi Sari", asal: "Jawa Tengah", slug: "legenda-dewi-sari" },
+            { judul: "Jaka Tarub dan 7 Bidadari", asal: "Jawa Tengah", slug: "jaka-tarub-7-bidadari" },
+            { judul: "Ajisaka", asal: "Jawa Tengah", slug: "ajisaka" },
+            { judul: "Ande-Ande Lumut", asal: "Jawa Tengah", slug: "ande-ande-lumut" }
+        ];
+
+        const container = document.getElementById('ceritaContainer');
+        const searchInput = document.getElementById('searchInput');
+
+        function renderCerita(list) {
+            container.innerHTML = '';
+            list.forEach(cerita => {
+                const card = document.createElement('a');
+                card.className = 'card-story';
+                card.href = `/cerita-rakyat/jawa-tengah/${cerita.slug}`;
+                card.innerHTML = `
+            <div>
+                <div class="title">${cerita.judul}</div>
+                <div class="region">${cerita.asal}</div>
+            </div>
+            <i class="bi bi-arrow-right-circle"></i>
+        `;
+                container.appendChild(card);
+            });
+        }
+
+        renderCerita(ceritaRakyat);
+
+        searchInput.addEventListener('input', () => {
+            const keyword = searchInput.value.toLowerCase();
+            const filtered = ceritaRakyat.filter(c =>
+                c.judul.toLowerCase().includes(keyword) ||
+                c.asal.toLowerCase().includes(keyword)
+            );
+            renderCerita(filtered);
+        });
+
+        // Menu toggle
         const toggle = document.querySelector('.menu-toggle');
         const sideMenu = document.getElementById('sideMenu');
         const overlay = document.getElementById('overlay');

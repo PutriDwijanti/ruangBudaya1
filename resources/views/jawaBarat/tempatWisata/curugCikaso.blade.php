@@ -118,7 +118,7 @@
   </div>
 
   <div class="content text-center">
-    <img src="gambar/curug_cikaso.jpg" class="img-fluid rounded" alt="Curug Cikaso" style="height: 400px; width: 85%; object-fit: cover;">
+    <img src="/images/curug_cikaso.jpg" class="img-fluid rounded" alt="Curug Cikaso" style="height: 400px; width: 85%; object-fit: cover;">
   </div>
 
   <div class="content">

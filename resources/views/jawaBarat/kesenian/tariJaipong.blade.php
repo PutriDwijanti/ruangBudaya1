@@ -167,7 +167,7 @@
   <div class="content">
     <div class="row-custom">
       <div class="col-custom text-center">
-        <img src="gambar/tari_jaipong.jpg" alt="Tari Jaipong" class="img-fluid" />
+        <img src="/images/tari_jaipong.jpg" alt="Tari Jaipong" class="img-fluid" />
       </div>
       <div class="col-custom">
         <div class="card-custom">

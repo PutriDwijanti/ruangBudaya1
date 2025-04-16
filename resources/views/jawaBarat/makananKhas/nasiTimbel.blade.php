@@ -161,7 +161,7 @@
     <div class="row-custom">
       <div class="col-custom">
         <div class="text-center">
-          <img src="gambar/nasi_timbel.jpg" alt="Nasi Timbel" class="img-fluid" />
+          <img src="/images/nasi_timbel.jpg" alt="Nasi Timbel" class="img-fluid" />
         </div>
       </div>
 

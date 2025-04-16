@@ -151,7 +151,7 @@
             <h3>Cerita Si Kabayan</h3> 
         </div>
 
-        <img src="gambar/kabayan.jpg" alt="Dongeng Si Kabayan" class="story-image">
+        <img src="/images/kabayan.jpg" alt="Dongeng Si Kabayan" class="story-image">
 
         <div class="story-text">
             Si Kabayan adalah tokoh dongeng khas dari tanah Sunda yang terkenal karena sifatnya yang jenaka, cerdik, dan terkadang malas. Ia sering kali menghadapi berbagai masalah dengan cara yang unik dan santai, kadang membuat orang di sekitarnya tertawa sekaligus kesal.
